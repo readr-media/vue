@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+
+      /*
+       * Compile to npm packages run on Node 16+
+       * We can overwrite this option at each package level
+       */
+      {
+        "targets": {
+          "node": "16"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/eslint-plugin": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "@vitejs/plugin-vue2": "~2",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.1",
+    "lerna": "^6.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "teaser": "^0.1.1",
+    "vite": "~3"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --cache --fix"
+  },
+  "name": "vue-share-components",
+  "dependencies": {
+    "vue": "~2",
+    "vue-template-compiler": "~2"
+  }
+}

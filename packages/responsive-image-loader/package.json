@@ -1,0 +1,32 @@
+{
+  "name": "@readr-media/vue-responsive-image-loader",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/lib.umd.cjs",
+  "module": "./dist/lib.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/readr-media/vue.git",
+    "directory": "packages/responsive-image-loader"
+  },
+  "keywords": [
+    "readr",
+    "vue",
+    "image",
+    "responsive"
+  ],
+  "author": "tsuki",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
