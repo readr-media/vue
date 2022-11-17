@@ -3,19 +3,21 @@
     <img
       v-if="fallback === false"
       :class="classes.image"
-      :src="images[resolution]"
+      :data-src="images[resolution]"
+      :data-srcset="srcset"
+      :style="style"
       :alt="alt"
-      :srcset="srcset"
       :sizes="sizes"
-      loading="lazy"
+      ref="image"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
     <img
       v-else
       :class="classes.image"
-      :src="images[resolution]"
+      :data-src="images[resolution]"
       :alt="alt"
+      ref="image"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
@@ -28,6 +30,7 @@
 </template>
 
 <script>
+import lozad from 'lozad'
 import classes from './ResponsiveImageLoader.module.css'
 
 export default {
@@ -49,6 +52,18 @@ export default {
     alt: {
       type: String,
       default: '',
+    },
+    backgroundColor: {
+      type: String,
+      default: '#efefef',
+    },
+    height: {
+      type: Number,
+      default: null,
+    },
+    width: {
+      type: Number,
+      default: null,
     },
     showLoadingEffect: {
       type: Boolean,
@@ -77,6 +92,9 @@ export default {
     },
     errorHandler(event) {
       // if current image failed, try next image with larger size
+      if (this.fallback === true) {
+        this.$refs.image.setAttribute('srcset', '')
+      }
       this.fallback = true
       const imageSrc = event.target?.currentSrc
       if (imageSrc) {
@@ -85,6 +103,7 @@ export default {
         if (index !== -1) {
           if (index < this.resolutionList.length) {
             this.resolution = this.resolutionList[index + 1][0]
+            this.$refs.image.src = this.images[this.resolution]
           } else {
             this.loading = false
           }
@@ -132,6 +151,37 @@ export default {
 
       return str
     },
+    aspectRatio() {
+      // Calculate the aspect ratio of the image if the width and the height are given.
+      if (!this.width || !this.height) return null
+
+      return (this.height / this.width) * 100
+    },
+    style() {
+      /**
+       * The background color is used as a placeholder while loading the image.
+       * You can use the dominant color of the image to improve perceived performance.
+       * See: https://manu.ninja/dominant-colors-for-lazy-loading-images/
+       */
+      const style = { backgroundColor: this.backgroundColor }
+
+      if (this.width) style.width = `${this.width}px`
+
+      /**
+       * If the image is still loading and an aspect ratio could be calculated,
+       * we apply the calculated aspect ratio by using padding top.
+       */
+      const applyAspectRatio = this.loading && this.aspectRatio
+      if (applyAspectRatio) {
+        // Prevent flash of unstyled image after the image is loaded.
+        style.height = 0
+
+        // Scale the image container according to the aspect ratio.
+        style.paddingTop = `${this.aspectRatio}%`
+      }
+
+      return style
+    },
   },
   watch: {
     srcset: {
@@ -141,6 +191,11 @@ export default {
       },
       immediate: true,
     },
+  },
+  mounted() {
+    // We initialize Lozad.js on the img element of our component.
+    const observer = lozad(this.$refs.image)
+    observer.observe()
   },
 }
 </script>

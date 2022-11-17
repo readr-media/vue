@@ -1,7 +1,7 @@
 {
   "name": "@readr-media/vue-responsive-image-loader",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "files": [
     "dist"
@@ -30,5 +30,8 @@
     "vue-template-compiler": "~2"
   },
   "author": "tsuki",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lozad": "^1.16.0"
+  }
 }
