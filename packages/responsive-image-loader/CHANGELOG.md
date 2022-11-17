@@ -1,5 +1,15 @@
 # @readr-media/vue-responsive-image-loader Changelog
 
+## 2022-11-18, Version 1.2.0
+
+### Notable Changes
+- Add image lazy loading
+
+### Commits
+* \[[`aa339553f8`](https://github.com/readr-media/vue-responsive-image-loader/commit/aa339553f8)] - chore(responsive-image-loader): bump version to 1.2.0 (Tsuki Akiba)
+* \[[`9f51f33553`](https://github.com/readr-media/vue-responsive-image-loader/commit/9f51f33553)] - feat(responsive-image-loader): add image lazy loading (Tsuki Akiba)
+* \[[`164f7e12f8`](https://github.com/readr-media/vue-responsive-image-loader/commit/164f7e12f8)] - docs(responsive-image-loader): update CHANGELOG (Tsuki Akiba)
+
 ## 2022-11-17, Version 1.1.0
 
 ### Notable Changes
@@ -7,11 +17,11 @@
 - apply css-injected-by-js plugin to build progress
 
 ### Commits
-* \[[`45d7cd4f1b`](https://github.com/readr-media/vue-responsive-image-loader/commit/45d7cd4f1b)] - chore(responsive-image-loader): bump version to 1.1.0 (Tsuki Akiba)
-* \[[`2b2337d34b`](https://github.com/readr-media/vue-responsive-image-loader/commit/2b2337d34b)] - chore(responsive-image-loader): apply css-injected-by-js plugin (Tsuki Akiba)
-* \[[`12ca9eaecb`](https://github.com/readr-media/vue-responsive-image-loader/commit/12ca9eaecb)] - chore(responsive-image-loader): add peerDependencies (Tsuki Akiba)
-* \[[`9a68a842f5`](https://github.com/readr-media/vue-responsive-image-loader/commit/9a68a842f5)] - docs(responsive-image-loader): add CHANGELOG.md (Tsuki Akiba)
-* \[[`cb37c4c630`](https://github.com/readr-media/vue-responsive-image-loader/commit/cb37c4c630)] - Publish (Tsuki Akiba)
+* \[[`7e0851c82d`](https://github.com/readr-media/vue-responsive-image-loader/commit/7e0851c82d)] - chore(responsive-image-loader): bump version to 1.1.0 (Tsuki Akiba)
+* \[[`eb500192e5`](https://github.com/readr-media/vue-responsive-image-loader/commit/eb500192e5)] - chore(responsive-image-loader): apply css-injected-by-js plugin (Tsuki Akiba)
+* \[[`72f0b7870c`](https://github.com/readr-media/vue-responsive-image-loader/commit/72f0b7870c)] - chore(responsive-image-loader): add peerDependencies (Tsuki Akiba)
+* \[[`6693753778`](https://github.com/readr-media/vue-responsive-image-loader/commit/6693753778)] - docs(responsive-image-loader): add CHANGELOG.md (Tsuki Akiba)
+* \[[`aed645c81d`](https://github.com/readr-media/vue-responsive-image-loader/commit/aed645c81d)] - chore(responsive-image-loader): update package.json (Tsuki Akiba)
 * \[[`87f1192dc5`](https://github.com/readr-media/vue-responsive-image-loader/commit/87f1192dc5)] - **docs**: rename README file (Tsuki Akiba)
 
 ## 2022-10-28, Version 1.0.0
