@@ -30,5 +30,8 @@
     "vue-template-compiler": "~2"
   },
   "author": "tsuki",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lozad": "^1.16.0"
+  }
 }
