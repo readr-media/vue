@@ -2,10 +2,11 @@ import { resolve } from 'node:path'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue2 from '@vitejs/plugin-vue2'
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://github.com/vitejs/vite-plugin-vue2
 export default defineConfig({
-  plugins: [vue2()],
+  plugins: [cssInjectedByJsPlugin(), vue2()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
