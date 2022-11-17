@@ -25,6 +25,10 @@
     "image",
     "responsive"
   ],
+  "peerDependencies": {
+    "vue": "~2",
+    "vue-template-compiler": "~2"
+  },
   "author": "tsuki",
   "license": "MIT"
 }
