@@ -1,5 +1,15 @@
 # @readr-media/vue-responsive-image-loader Changelog
 
+## 2022-11-18, Version 1.4.0
+
+### Notable Changes
+- use css module instead of inline css
+
+### Commits
+* \[[`057f251e97`](https://github.com/readr-media/vue-responsive-image-loader/commit/057f251e97)] - chore(responsive-image-loader): bump version to 1.4.0 (Tsuki Akiba)
+* \[[`ae9c818806`](https://github.com/readr-media/vue-responsive-image-loader/commit/ae9c818806)] - refactor(responsive-image-loader): use css module instead of inline css (Tsuki Akiba)
+* \[[`0da465436e`](https://github.com/readr-media/vue-responsive-image-loader/commit/0da465436e)] - docs(responsive-image-loader): update CHANGELOG (Tsuki Akiba)
+
 ## 2022-11-18, Version 1.3.0
 
 ### Notable Changes

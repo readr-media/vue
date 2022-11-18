@@ -1,30 +1,27 @@
 <template>
-  <span style="display: inline-block; position: relative; width: 100%; height: auto">
+  <span class="container">
     <img
       v-if="fallback === false"
+      class="image"
       :data-src="images[resolution]"
       :data-srcset="srcset"
       :sizes="sizes"
       ref="image"
       :style="style"
-      style="width: inherit; height: inherit; object-fit: cover"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
     <img
       v-else
+      class="image"
       :data-src="images[resolution]"
       :alt="alt"
       ref="image"
       :style="style"
-      style="width: inherit; height: inherit; object-fit: cover"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
-    <div
-      v-show="loading && showLoadingEffect"
-      style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"
-    >
+    <div v-show="loading && showLoadingEffect" class="loading">
       <slot name="loading">
         <img :src="require('../assets/loading.svg')" />
       </slot>
@@ -200,3 +197,24 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.image {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
