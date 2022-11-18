@@ -1,5 +1,17 @@
 # @readr-media/vue-responsive-image-loader Changelog
 
+## 2022-11-18, Version 1.5.0
+
+### Notable Changes
+- add debug info
+- update container style
+
+### Commits
+* \[[`dd12a5ff92`](https://github.com/readr-media/vue-responsive-image-loader/commit/dd12a5ff92)] - chore(responsive-image-loader): bump version to 1.5.0 (Tsuki Akiba)
+* \[[`5db56618c6`](https://github.com/readr-media/vue-responsive-image-loader/commit/5db56618c6)] - refactor(responsive-image-loader): update style (Tsuki Akiba)
+* \[[`344998c761`](https://github.com/readr-media/vue-responsive-image-loader/commit/344998c761)] - refactor(responsive-image-loader): add debug info (Tsuki Akiba)
+* \[[`da549f942a`](https://github.com/readr-media/vue-responsive-image-loader/commit/da549f942a)] - docs(responsive-image-loader): update CHANGELOG (Tsuki Akiba)
+
 ## 2022-11-18, Version 1.4.0
 
 ### Notable Changes

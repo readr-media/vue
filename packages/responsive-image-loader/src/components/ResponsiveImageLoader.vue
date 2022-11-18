@@ -8,6 +8,7 @@
       :sizes="sizes"
       ref="image"
       :style="style"
+      data-order="1"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
@@ -18,6 +19,7 @@
       :alt="alt"
       ref="image"
       :style="style"
+      data-order="2"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
@@ -203,7 +205,7 @@ export default {
   display: inline-block;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .image {
   width: inherit;
