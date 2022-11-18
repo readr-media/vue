@@ -8,6 +8,7 @@
       :sizes="sizes"
       ref="image"
       :style="style"
+      data-order="1"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
@@ -18,6 +19,7 @@
       :alt="alt"
       ref="image"
       :style="style"
+      data-order="2"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
