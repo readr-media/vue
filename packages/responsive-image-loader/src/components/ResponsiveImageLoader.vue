@@ -1,27 +1,30 @@
 <template>
-  <span :class="classes.container">
+  <span style="display: inline-block; position: relative; width: 100%; height: auto">
     <img
       v-if="fallback === false"
-      :class="classes.image"
       :data-src="images[resolution]"
       :data-srcset="srcset"
-      :style="style"
-      :alt="alt"
       :sizes="sizes"
       ref="image"
+      :style="style"
+      style="width: inherit; height: inherit; object-fit: cover"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
     <img
       v-else
-      :class="classes.image"
       :data-src="images[resolution]"
       :alt="alt"
       ref="image"
+      :style="style"
+      style="width: inherit; height: inherit; object-fit: cover"
       @load="loadHandler($event)"
       @error="errorHandler($event)"
     />
-    <div v-show="loading && showLoadingEffect" :class="classes.loading">
+    <div
+      v-show="loading && showLoadingEffect"
+      style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"
+    >
       <slot name="loading">
         <img :src="require('../assets/loading.svg')" />
       </slot>
@@ -31,7 +34,6 @@
 
 <script>
 import lozad from 'lozad'
-import classes from './ResponsiveImageLoader.module.css'
 
 export default {
   name: 'ResponsiveImageLoader',
@@ -55,7 +57,7 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: '#efefef',
+      default: 'rgba(0, 0, 0, 0)',
     },
     height: {
       type: Number,
@@ -75,7 +77,6 @@ export default {
       resolution: 'original',
       fallback: false,
       loading: true,
-      classes,
     }
   },
   methods: {
