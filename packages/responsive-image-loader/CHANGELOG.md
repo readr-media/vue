@@ -1,5 +1,17 @@
 # @readr-media/vue-responsive-image-loader Changelog
 
+## 2022-11-18, Version 1.3.0
+
+### Notable Changes
+- inline css style to prevent extra load
+
+### Commits
+* \[[`c22af1e300`](https://github.com/readr-media/vue-responsive-image-loader/commit/c22af1e300)] - docs(responsive-image-loader): update README (Tsuki Akiba)
+* \[[`5585a060c3`](https://github.com/readr-media/vue-responsive-image-loader/commit/5585a060c3)] - chore(responsive-image-loader): bump version to 1.3.0 (Tsuki Akiba)
+* \[[`61e434f14d`](https://github.com/readr-media/vue-responsive-image-loader/commit/61e434f14d)] - chore(responsive-image-loader): remove vite-plugin-css-injected-by-js (Tsuki Akiba)
+* \[[`314ed3f806`](https://github.com/readr-media/vue-responsive-image-loader/commit/314ed3f806)] - refactor(responsive-image-loader): inline css style to prevent extra load (Tsuki Akiba)
+* \[[`014c17296f`](https://github.com/readr-media/vue-responsive-image-loader/commit/014c17296f)] - docs(responsive-image-loader): update CHANGELOG (Tsuki Akiba)
+
 ## 2022-11-18, Version 1.2.0
 
 ### Notable Changes
