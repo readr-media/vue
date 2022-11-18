@@ -205,7 +205,7 @@ export default {
   display: inline-block;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .image {
   width: inherit;
