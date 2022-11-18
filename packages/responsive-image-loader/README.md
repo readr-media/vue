@@ -13,6 +13,9 @@
 | images | Object | `V` | `{ original: ''}` | 圖片設定，範例： `{ w400: 'https://i.imgur.com/JWLBxWl-w400.jpeg', original: 'https://i.imgur.com/JWLBxWl.jpeg' }`，w400 為寬度 400 以上時，要載入的圖片設定 |
 | sizes | String |  | `100vw` | 請參考： [The Image Embed element#sizes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) |
 | alt | String |  | `''` | 替代文字 |
+| backgroundColor | String |  | `rgba(0, 0, 0, 0)` | 預設背景顏色 |
+| height | Number |  | `null` | 圖片高度 |
+| width | Number |  | `null` | 圖片寬度 |
 | showLoadingEffect | Boolean |  | `true` | 是否顯示載入特效 |
 
 ## 使用說明
